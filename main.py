@@ -6,8 +6,8 @@ import cv2
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
-showfileUploaderEncoding = False
+
+
 @st.cache(allow_output_mutation=True)
 def load_my_model():
     model = keras.models.load_model("VGG16_model.h5")
