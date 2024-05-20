@@ -25,7 +25,7 @@ def index_to_emotion(index):
 
 
 def model_prediction(test_image):
-    model = keras.models.load_model("VGG16_model.h5")
+    
     image = tf.keras.preprocessing.image.load_img(test_image, target_size=(150,150))
     img_to_arr = tf.keras.preprocessing.image.img_to_array(image)
     
@@ -65,9 +65,10 @@ class FaceEmotion(VideoTransformerBase):
                 roi = tf.keras.preprocessing.image.img_to_array(roi)
                 roi = np.expand_dims(roi, axis=0)
                 
-                prediction = model.predict(roi)[0]
-                result_index = int(np.argmax(prediction))
-                output = index_to_emotion(result_index)
+                # prediction = model.predict(roi)[0]
+                # result_index = int(np.argmax(prediction))
+                # output = index_to_emotion(result_index)
+                output = "happy"
                 
                 
             
