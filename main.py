@@ -62,10 +62,10 @@ class FaceEmotion(VideoTransformerBase):
                 roi = tf.keras.preprocessing.image.img_to_array(roi)
                 roi = np.expand_dims(roi, axis=0)
                 
-                # prediction = model.predict(roi)[0]
-                # result_index = int(np.argmax(prediction))
-                # output = index_to_emotion(result_index)
-                output = "happy"
+                prediction = model.predict(roi)[0]
+                result_index = int(np.argmax(prediction))
+                output = index_to_emotion(result_index)
+                
                 
             
             label_position = (x, y)
