@@ -25,7 +25,7 @@ def index_to_emotion(index):
 
 
 def model_prediction(test_image):
-    
+    model = keras.models.load_model("VGG16_model.h5")
     image = tf.keras.preprocessing.image.load_img(test_image, target_size=(150,150))
     img_to_arr = tf.keras.preprocessing.image.img_to_array(image)
     
