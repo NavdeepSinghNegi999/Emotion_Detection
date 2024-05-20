@@ -9,7 +9,7 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfigura
 # st.set_option('deprecation.showfileUploaderEncoding', False)
 # showfileUploaderEncoding = False
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
 def load_my_model():
     model = keras.models.load_model("VGG16_model.h5")
     return model
