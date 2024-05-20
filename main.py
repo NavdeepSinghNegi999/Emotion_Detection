@@ -37,6 +37,8 @@ def model_prediction(test_image):
     
     return result_index
 
+
+
 RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
 
 try:
@@ -95,13 +97,13 @@ if(app_mode == "Image Emotion Prediction"):
         st.success(f"{result}")
         
         
-# if(app_mode == "Live emotion Prediction"):
-#     st.header("Emotion Detection")
+if(app_mode == "Live emotion Prediction"):
+    st.header("Emotion Detection")
     
     
-#     st.title("Live Video Feed")
-#     webrtc_streamer(key="example", mode = WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
-#                         video_processor_factory = FaceEmotion)
+    st.title("Live Video Feed")
+    webrtc_streamer(key="example", mode = WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
+                        video_processor_factory = FaceEmotion)
     
     
     
