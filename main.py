@@ -62,8 +62,8 @@ if(app_mode == "Image Emotion Prediction"):
     
     if(st.button("Predict")):
         st.write("Our Prediction")
-        # result_index  = model_prediction(test_image)
-        result_index = 1
+        result_index  = model_prediction(test_image)
+        # result_index = 1
         result = index_to_emotion(result_index)
         st.success(f"{result}")
         
