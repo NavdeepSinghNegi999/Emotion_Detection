@@ -1,6 +1,6 @@
-import keras
+# import keras
 import streamlit as st
-import tensorflow as tf
+# import tensorflow as tf
 import numpy as np
 import cv2
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
@@ -62,7 +62,8 @@ if(app_mode == "Image Emotion Prediction"):
     
     if(st.button("Predict")):
         st.write("Our Prediction")
-        result_index  = model_prediction(test_image)
+        # result_index  = model_prediction(test_image)
+        result_index = 1
         result = index_to_emotion(result_index)
         st.success(f"{result}")
         
